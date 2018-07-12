@@ -1,0 +1,4 @@
+ ["id"]=> int(316749618)
+ ["nickname"]=> TETE2082975"
+ ["password"]=> "qatest740"
+ "email"]=> "test_user_35675931@testuser.com" } }

@@ -1,0 +1,74 @@
+[09-Jun-2018 02:45:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jun-2018 03:03:26 UTC] PHP Fatal error:  Uncaught exception 'MercadoPagoException' with message 'unit_price invalid' in /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php:528
+Stack trace:
+#0 /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php(215): MPRestClient::post(Array)
+#2 /home/protechdry/public_html/comprarMpConEnvio.php(88): MP->create_preference(Array)
+#3 {main}
+  thrown in /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php on line 528
+[09-Jun-2018 03:05:07 UTC] PHP Fatal error:  Uncaught exception 'MercadoPagoException' with message 'unit_price invalid' in /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php:528
+Stack trace:
+#0 /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php(215): MPRestClient::post(Array)
+#2 /home/protechdry/public_html/comprarMpConEnvio.php(88): MP->create_preference(Array)
+#3 {main}
+  thrown in /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php on line 528
+[10-Jun-2018 09:46:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[11-Jun-2018 23:38:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jun-2018 02:19:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jun-2018 13:50:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[13-Jun-2018 06:18:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[18-Jun-2018 14:52:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[21-Jun-2018 17:51:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[21-Jun-2018 20:18:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[22-Jun-2018 00:28:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[22-Jun-2018 03:55:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[22-Jun-2018 14:21:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[23-Jun-2018 18:21:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[23-Jun-2018 21:38:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[23-Jun-2018 21:52:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[25-Jun-2018 16:36:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[28-Jun-2018 18:18:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[28-Jun-2018 18:20:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[29-Jun-2018 01:41:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[29-Jun-2018 16:28:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[29-Jun-2018 16:29:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[29-Jun-2018 16:31:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[29-Jun-2018 20:43:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[30-Jun-2018 00:23:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[30-Jun-2018 02:42:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[30-Jun-2018 20:47:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[30-Jun-2018 22:20:34 UTC] PHP Fatal error:  Uncaught exception 'MercadoPagoException' with message 'unit_price invalid' in /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php:528
+Stack trace:
+#0 /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php(215): MPRestClient::post(Array)
+#2 /home/protechdry/public_html/comprarMpConEnvioGratis.php(75): MP->create_preference(Array)
+#3 {main}
+  thrown in /home/protechdry/public_html/sdk-php-master-mp/lib/mercadopago.php on line 528
+[01-Jul-2018 11:07:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[01-Jul-2018 12:10:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[01-Jul-2018 13:02:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[02-Jul-2018 21:07:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[05-Jul-2018 12:36:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[06-Jul-2018 21:02:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[08-Jul-2018 07:24:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[08-Jul-2018 09:04:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[08-Jul-2018 16:53:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[08-Jul-2018 18:41:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[08-Jul-2018 19:24:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jul-2018 00:20:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jul-2018 13:15:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jul-2018 16:08:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jul-2018 22:44:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jul-2018 23:28:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[09-Jul-2018 23:41:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[10-Jul-2018 00:37:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[10-Jul-2018 04:37:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[10-Jul-2018 11:17:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[11-Jul-2018 00:34:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[11-Jul-2018 17:50:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jul-2018 00:30:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jul-2018 00:49:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jul-2018 01:24:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jul-2018 02:26:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
+[12-Jul-2018 13:31:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/protechdry/public_html/clases/Usuario.php on line 18
