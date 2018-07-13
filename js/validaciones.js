@@ -39,13 +39,14 @@ $(document).ready(function() {
 
 
 	$("#partido").change(function(){
+		
 		partido = $("#partido").val();
 
-		if(partido=="LA MATANZA" || partido=="LOMAS DE ZAMORA" || partido=="QUILMES" || partido=="ALMIRANTE BROWN"
+		if(partido=="C.A.B.A" || partido=="LA MATANZA" || partido=="LOMAS DE ZAMORA" || partido=="QUILMES" || partido=="ALMIRANTE BROWN"
 			|| partido=="MERLO" || partido=="MORENO" || partido=="LANUS" || partido=="FLORENCIO VARELA" || partido=="GENERAL SAN MARTIN"
 			|| partido=="SAN MIGUEL" || partido=="TIGRE" || partido=="3 DE FEBRERO" || partido=="AVELLANEDA" || partido=="MALVINAS ARGENTINAS"
 			|| partido=="BERAZATEGUI" || partido=="MORON" || partido=="ESTEBAN ECHEVERRIA" || partido=="SAN ISIDRO" || partido=="VICENTE LOPEZ"
-			|| partido=="JOSE C. PAZ" || partido=="HURLINGHAM" || partido=="ITUZAINGO" || partido=="EZEIZA" || partido=="SAN FERNANDO" || partido=='CAPITAL FEDERAL'  ){
+			|| partido=="JOSE C. PAZ" || partido=="HURLINGHAM" || partido=="ITUZAINGO" || partido=="EZEIZA" || partido=="SAN FERNANDO"){
 				$("#form-checkout").removeAttr("action");
 				$('#form-checkout').attr('action', 'comprarMpConEnvioGratis.php');            	
             }else{
@@ -97,6 +98,9 @@ $(document).ready(function() {
 
 		var provincia = $("#provincia option:selected").val();
 
+		if(provincia != ""){
+		
+
 				$.ajax({
 				data:"provincia="+ provincia,
 				url:'ajax/buscarPartidoSegunProvincia.php',
@@ -104,7 +108,7 @@ $(document).ready(function() {
 				success:function(response){
 
 					$("#partido").html(response);
-
+					$("#partido").trigger("change");
 					var partido = $("#partido option:selected").val();
 
 					$.ajax({
@@ -121,6 +125,14 @@ $(document).ready(function() {
 
 				}
 				});
+		}else{
+
+
+			$('#partido').append('<option value="" selected="selected">Selecciona tu partido</option>');
+			$('#ciudad').append('<option value="" selected="selected">Selecciona tu ciudad</option>');
+
+
+		}
 
 	});
 
@@ -427,7 +439,7 @@ $(document).ready(function() {
 			|| partido=="MERLO" || partido=="MORENO" || partido=="LANUS" || partido=="FLORENCIO VARELA" || partido=="GENERAL SAN MARTIN"
 			|| partido=="SAN MIGUEL" || partido=="TIGRE" || partido=="3 DE FEBRERO" || partido=="AVELLANEDA" || partido=="MALVINAS ARGENTINAS"
 			|| partido=="BERAZATEGUI" || partido=="MORON" || partido=="ESTEBAN ECHEVERRIA" || partido=="SAN ISIDRO" || partido=="VICENTE LOPEZ"
-			|| partido=="JOSE C. PAZ" || partido=="HURLINGHAM" || partido=="ITUZAINGO" || partido=="EZEIZA" || partido=="SAN FERNANDO" || partido=='CAPITAL FEDERAL'  ){
+			|| partido=="JOSE C. PAZ" || partido=="HURLINGHAM" || partido=="ITUZAINGO" || partido=="EZEIZA" || partido=="SAN FERNANDO" || partido=='C.A.B.A'){
 				$("#form-checkout").removeAttr("action");
 				$('#form-checkout').attr('action', 'comprarMpConEnvioGratis.php');            	
             }else{

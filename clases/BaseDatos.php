@@ -1967,8 +1967,7 @@ public function listarUnSoloProducto($id){
 
 
 		$sql="SELECT provincia_nombre
-			  FROM provincia
-			  WHERE id!=0";
+			  FROM provincia";
 
 		$consulta=mysqli_query($this->conexion,$sql);
 
@@ -3121,7 +3120,7 @@ public function buscarPartidoSegunProvincia($provincia){
 
 		$stmt=$this->mysqli->prepare("SELECT DEP.nombre	
 		  FROM departamentos DEP JOIN provincia PRO ON PRO.id=DEP.provincia_id		  
-		  WHERE PRO.provincia_nombre like ? AND DEP.id!=0
+		  WHERE PRO.provincia_nombre like ?
 		  ORDER BY DEP.nombre ASC");
 
 		$stmt->bind_param("s",$likeVar);
@@ -3147,7 +3146,7 @@ public function buscarCiudadSegunPartido($partido){
 
 		$stmt=$this->mysqli->prepare("SELECT CIU.ciudad_nombre
 									  FROM ciudad CIU JOIN departamentos DEP ON CIU.departamento_id=DEP.id		  
-									  WHERE DEP.nombre like ? AND CIU.id!=0
+									  WHERE DEP.nombre like ?
 									  ORDER BY CIU.ciudad_nombre ASC");
 
 		$stmt->bind_param("s",$likeVar);
