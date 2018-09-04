@@ -31,8 +31,6 @@ $usuario=new Usuario();
 	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<!-- ESTILOS PROPIOS -->
 	<link rel="stylesheet" type="text/css" href="estilos_css/fuentes.css">
-		<link rel="stylesheet" type="text/css" href="estilos_css/estilos.css">
-
 	<link rel="stylesheet" type="text/css" href="estilos_css/estilos2.css">
 	<!-- MATERIAL ICONS -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">

@@ -1195,7 +1195,7 @@ public function listarTodoslosProductos(){
 public function listarVentas(){
 	$baseDatos= new BaseDatos();
 
-	$stmt=$baseDatos->mysqli->prepare("SELECT DISTINCT UCP.comprobante_nro,UCP.id_mp,UCP.id_tp,UCP.fecha,UCP.email_usuario,EE.descripcion as envio, EV.descripcion as venta,UCP.color,UCP.talle
+	$stmt=$baseDatos->mysqli->prepare("SELECT DISTINCT UCP.comprobante_nro,UCP.id_mp,UCP.id_tp,UCP.fecha,UCP.email_usuario,EE.descripcion as envio, EV.descripcion as venta
 									  FROM usuario_compra_producto UCP JOIN estado_envio EE ON UCP.id_estado_envio=EE.id
 									  									JOIN estado_venta EV ON UCP.id_estado_venta=EV.id
 									  ORDER BY UCP.id_estado_envio ASC");
@@ -1212,8 +1212,7 @@ public function listarVentas(){
 					<th>Nro Mercado Pago</th>
 					<!--<th>Nro Todo Pago </th>-->
 					<th>Email</th>
-					<th>Color</th>
-					<th>Talle</th>
+			
 					<th>Productos Comprados</th>
 					<th>Total</th>
 					<th>Fecha</th>
@@ -1228,7 +1227,7 @@ public function listarVentas(){
 			$total=0;
 			$buscar=$fila['comprobante_nro'];
 
-			$sql2="SELECT UCP.marca as marca,UCP.modelo,UCP.tiene_descuento,UCP.precio,UCP.precio_descuento,UCP.cantidad
+			$sql2="SELECT UCP.marca as marca,UCP.modelo,UCP.tiene_descuento,UCP.precio,UCP.precio_descuento,UCP.cantidad,UCP.color,UCP.talle
 				   FROM usuario_compra_producto UCP
 				   WHERE UCP.comprobante_nro='$buscar'";
 
@@ -1240,8 +1239,7 @@ public function listarVentas(){
 				<td>".$fila['id_mp']."</td>
 				<!--<td>".$fila['id_tp']."</td>-->
 				<td><a href='usuario-admin-listar-usuario.php?email=".$fila['email_usuario']."' target='_blank'>".$fila['email_usuario']."</a></td>
-				<td>".$fila['color']."</td>
-				<td>".$fila['talle']."</td>
+		
 				<td>";
 				
 
@@ -1260,6 +1258,10 @@ public function listarVentas(){
 							echo $fila2['cantidad'];
 							echo " unidades)";
 							echo "<br>";
+							echo $fila2['color'];
+							echo  "<br>";
+							echo $fila2['talle'];
+							echo  "<br>";
 							echo "<b>Precio descuento: ".$fila2['precio_descuento']."</b>";
 							echo "<br>";
 							echo "<b>Precio: ".$fila2['precio']."</b>";

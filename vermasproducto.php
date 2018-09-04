@@ -51,7 +51,6 @@ $usuario=new Usuario();
 	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<!-- ESTILOS PROPIOS -->
 	<link rel="stylesheet" type="text/css" href="estilos_css/fuentes.css"> 
-	<!--  --> <link rel="stylesheet" type="text/css" href="estilos_css/estilos.css">
 	<link rel="stylesheet" type="text/css" href="estilos_css/estilos2.css">
 	<!-- MATERIAL ICONS -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
@@ -153,34 +152,35 @@ include ("include/menu.php");
 
 
 <?php 
-if($_GET['alert']=='on'){
-	echo '<!-- MODAL -->
-  <div class="modal fade" id="confirm-modal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <img src="elementos_separados/logo.png" width="30%" alt="">
-        </div>
-        <div class="modal-body">
-        <h1>¡Has agregado un producto al carrito!</h1>
-        <a class="modal-confirm-button " data-dismiss="modal" style="float:left;margin-left:2%;"><h4>Seguir comprando</h4></a>
-        <a class="modal-confirm-button" style="float:right;margin-right:2%;" onClick="cambiarDeConfirmModalACheckoutModal();"><h4>Ir al checkout</h4></a>
-        	
-        </div>
-      </div>
+if(isset($_GET['alert'])){
+  if($_GET['alert']=='on'){
+  	echo '<!-- MODAL -->
+    <div class="modal fade" id="confirm-modal" role="dialog">
+      <div class="modal-dialog">
       
-    </div>
-  </div>';
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <img src="elementos_separados/logo.png" width="30%" alt="">
+          </div>
+          <div class="modal-body">
+          <h1>¡Has agregado un producto al carrito!</h1>
+          <a class="modal-confirm-button " data-dismiss="modal" style="float:left;margin-left:2%;"><h4>Seguir comprando</h4></a>
+          <a class="modal-confirm-button" style="float:right;margin-right:2%;" onClick="cambiarDeConfirmModalACheckoutModal();"><h4>Ir al checkout</h4></a>
+          	
+          </div>
+        </div>
+        
+      </div>
+    </div>';
 
-  $_GET['alert']='off';
+    $_GET['alert']='off';
 
 
-}else {
+  }else {
+  }
 }
-
 
 
 

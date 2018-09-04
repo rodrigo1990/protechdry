@@ -18,7 +18,7 @@
 		</div>
 
 	  </div>
-	  <div>
+	  <!--<div>
 	  	<img src="banners/banner_2.jpg"  width="100%" alt="Protech Dry">
 	  	<div class="banner-info" id='banner-2'>
 	  		<div class="line center-block" style="width:564px;">
@@ -29,7 +29,7 @@
 		  	</div>
 		  	<!--<h3 class="line">Ropa interior de algodón</h3>-->
 		  	<!--<h1  class="line"id='tit-celeste'>RECOMENDADA PARA <br> INCONTINENCIA LEVE Y MODERADA</h1>-->
-		  	<div class="line">
+		  <!--	<div class="line">
 		  		<hr><h3 id='tit-hr'>Lanzamiento</h3><hr>
 		  	</div>
 		  	<h1  class="line big">20%OFF</h1>
@@ -38,7 +38,7 @@
 		  		<a class="banner-btn"href="todosLosProductos.php">COMPRAR</a>
 		  	</div>
 	  	</div>
-	  </div>
+	  </div>-->
 	  <div>
 	      <img src="banners/banner_3.jpg"  width="100%" alt="Protech Dry">
 	      <div class="banner-info" id='banner-3'>
@@ -66,7 +66,6 @@
 	<!-- Set up your HTML -->
 	<div id="slider-xs-sm" class="owl-carousel " style="">
 	  <div><img src="banners/banner_xs_1.jpg"  width="100%" alt="Protech Dry"></div>
-	  <div><img src="banners/banner_xs_2.jpg"  width="100%" alt="Protech Dry"></div>
 	  <div><img src="banners/banner_xs_3.jpg"  width="100%" alt="Protech Dry"></div>
 
 	</div>

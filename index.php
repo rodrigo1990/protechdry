@@ -27,7 +27,6 @@ $usuario=new Usuario();
 	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" media="screen">
 	<!-- ESTILOS PROPIOS -->
 	<link rel="stylesheet" type="text/css" href="estilos_css/fuentes.css">
-	<link rel="stylesheet"  href="estilos_css/estilos.css">
 	<link rel="stylesheet" type="text/css" href="estilos_css/estilos2.css">
 	<!-- MATERIAL ICONS -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
@@ -143,7 +142,7 @@ $usuario=new Usuario();
 
 <?php $bd->listarProductosParaDispositivosXs(); ?>
 
-<div class="row slider-2" style="margin-top: 4%;">
+<div class="row slider-2" style="">
 	<div class="container">
 		<!-- Set up your HTML -->
 		<div class="owl-carousel" style="">
@@ -196,13 +195,11 @@ include("include/footer.php");
 <!-- FUNCIONES JS -->
 <script src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
-var $jQuery_3_2_1 = $.noConflict();
+var $ = $.noConflict();
 </script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 <!-- MENU FIXED  -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.sticky.js"></script>
 <script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/carrito.js"></script>
@@ -248,10 +245,6 @@ $(document).ready(function () {
 });
 </script>
 <script type="text/javascript" src="js/preloader.js"></script>
-
-
-
-
 <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'ec0bb246-1cf7-4fba-8381-c435cc995783', f: true }); done = true; } }; })();</script>
 </body>
 

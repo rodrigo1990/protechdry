@@ -621,10 +621,10 @@ ul#carrito-lista {
   color: #ff6a00 !important; }
 
 /* line 816, ../estilos_scss/estilos.scss */
-#comprar-modal-btn {
+/*#comprar-modal-btn {
  /* position: absolute;*/
-  margin-top: 3% !important;
-  margin-left: -7%; }
+ /* margin-top: 3% !important;
+  margin-left: -7%; }*/
 
 /* line 821, ../estilos_scss/estilos.scss */
 .modal-content .form-control {
@@ -762,12 +762,7 @@ ul#carrito-lista {
 
 /* line 1114, ../estilos_scss/estilos.scss */
 
-/* line 1119, ../estilos_scss/estilos.scss */
-.producto-responsive ul {
-  margin-top: 3%;
-  text-align: left !important;
-  line-height: 100% !important;
-  margin-left: -10%; }
+
 
 /* line 1127, ../estilos_scss/estilos.scss */
 .producto-responsive ul li {
@@ -1233,54 +1228,7 @@ a.btn-ver-mas-sin-stock {
     margin-left: 1%;
     border-radius: 5px; } }
 
-/* line 1768, ../estilos_scss/estilos.scss */
-.numble-control {
-  float: left;
-  width: 80px;
-  height: 67px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  color: black;
-  background-color: white;
-  position: relative;
-  /*margin-top: -4%;*/
-  font-size: 20pt;
-  border-radius: 5px; }
 
-/* line 1785, ../estilos_scss/estilos.scss */
-.numble-value {
-  margin-top: -5px; }
-
-/* line 1789, ../estilos_scss/estilos.scss */
-.numble-control .numble-arrow {
-  position: absolute;
-  right: 0px;
-  cursor: pointer;
-  color: black;
-  background-color: transparent; }
-
-/* line 1798, ../estilos_scss/estilos.scss */
-.numble-control .numble-increment {
-  color: grey;
-  top: 0px;
-  height: 33px;
-  font-size: 23px;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: lightgrey; }
-
-/* line 1807, ../estilos_scss/estilos.scss */
-.numble-control .numble-decrement {
-  color: grey;
-  top: 33px;
-  height: 33px;
-  font-size: 23px;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: lightgrey;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: lightgrey; }
 
 /*.numble-value:focus{
 	

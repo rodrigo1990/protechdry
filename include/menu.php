@@ -7,7 +7,7 @@
     LETTER-SPACING: 3PX;">CONTACTO DIRECTO:<B>011 15 5473 2203</B> TELEFONO: <B>011 4-919-1500/1800</B></P>
     </div>
 </div>-->
-<div class="row menu" id="primer-row" style="padding: 2% 1% 1%;z-index: 10000;">
+<div class="row menu" id="primer-row" style="z-index: 10000;">
 	<div class="container">
 		<div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
 			<a href="index.php">
@@ -84,7 +84,7 @@
 	</div>
 </div>
 </div>
-<div class="row menu" id="primer-row-xs" style="padding: 2% 1% 1%;z-index: 10000;">
+<div class="row menu" id="primer-row-xs" style="z-index: 10000;">
 	<div class="container">
 		<div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
 			<a href="index.php">
@@ -164,7 +164,7 @@
 
 <!-- CARRITO DE COMPRAS !! -->
  <!-- CARRITO DE COMPRAS !! -->
-<div id="carrito" class="animated slideInDown carrito-ver-mas" style="    margin-top: 0%">
+<div id="carrito" class="animated slideInDown carrito-ver-mas" style="    margin-top: 88px">
 
 	<i id="carrito-close" class="material-icons"  onClick="cerrarVentanaCarrito();">close</i>
 	<ul id="carrito-lista">

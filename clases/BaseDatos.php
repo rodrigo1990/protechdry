@@ -39,7 +39,7 @@ public function listarProductos(){
 			if($i==11){break;}
 
 
-			if($fila['tiene_descuento']==1){
+			if($fila['tiene_descuento']==0){
 
 					if($z==1){
 						echo "<div class='producto-row row' style=''>";
@@ -59,12 +59,51 @@ public function listarProductos(){
 								</div>
                                 <div class='precio-cont'>
     								<h4 class='precio'>
-        								<i  style='color:grey; !important;    text-decoration: line-through;'>
         								    $".$fila['precio']."
-        								</i>
         								</h4>
     							
-    							<h4 class='precio'>
+    						
+								</div>
+								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
+
+							
+							
+					</div>
+						
+					</div>";
+					if($z==4){
+						echo "</div>";
+						echo "</div>";
+						$z=0;
+					}
+
+				}else if($fila['tiene_descuento']==1){
+				    $descuento = (($fila['precio']-$fila['precio_descuento'])/$fila['precio'])*100;
+				    
+			
+					if($z==1){
+						echo "<div class='producto-row row' style=''>";
+						echo "<div class='container'>";
+					}
+				
+					echo "<div class='hidden-xs col-sm-6 col-md-3 col-lg-3'>
+					
+					<div class='producto-responsive text-center'>
+								<img  src=img/".$fila['imagen']." width='200' height='200' alt='Protech Dry   ".$fila['modelo']."'>
+								<h3 class='descuento'>-".$descuento."% OFF</h3>
+								<h4>".strtoupper($fila['modelo'])."</h4>
+								<div class='color-cont'>
+									<ul>
+										<li class='blanco'></li>
+										<li clasS='negro'></li>
+									</ul>
+								</div>
+                                <div class='precio-cont'>
+    								<h4 class='precio'>
+        								    <del>$".$fila['precio']."</del>
+        								</h4>
+    							
+    						<h4 class='precio'>
     								    $".$fila['precio_descuento']."
 								</h4>
 								</div>
@@ -75,15 +114,11 @@ public function listarProductos(){
 					</div>
 						
 					</div>";
-					if($z==5){
+					if($z==4){
 						echo "</div>";
 						echo "</div>";
 						$z=0;
 					}
-
-				}else if($fila['tiene_descuento']==1){
-				
-				
 		
 				}
 			}//if es_destacado
@@ -116,7 +151,7 @@ public function listarProductos(){
 			if($i==11){break;}
 
 
-			if($fila['tiene_descuento']==1){
+			if($fila['tiene_descuento']==0){
 
 					if($z==1){
 						echo "<div class='producto-row row'>";
@@ -141,14 +176,10 @@ public function listarProductos(){
 
 								<div class='precio-cont'>
     								<h4 class='precio'>
-        								<i  style='color:grey; !important;    text-decoration: line-through;'>
         								    $".$fila['precio']."
-        								</i>
     								</h4>
     							
-        							<h4 class='precio'>
-        								    $".$fila['precio_descuento']."
-    								</h4>
+        						
 								</div>
 								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
 								
@@ -167,8 +198,54 @@ public function listarProductos(){
 					}
 
 				}else if($fila['tiene_descuento']==1){
+				    $descuento = (($fila['precio']-$fila['precio_descuento'])/$fila['precio'])*100;
 				
+				    if($z==1){
+						echo "<div class='producto-row row'>";
+						echo "<div class='container'>";
+					}
 				
+					echo "<div class='hidden-xs col-sm-6 col-md-6 col-lg-6'>
+					
+					<div class='producto-responsive-genero text-center'>
+							<a href='vermasproducto.php?id=".$fila['id']."'>
+							
+								<img  src=img/".$fila['imagen']." width='200' height='200' alt='ProtechDry   ".$fila['modelo']."'>
+								<h3 class='descuento'>-".$descuento."% OFF</h3>
+								<br>
+								<h4 style='display:inline-block'>".strtoupper($fila['modelo'])."</h4>
+								
+								<div class='color-cont' style='display:inline-block'>
+									<ul>
+										<li class='blanco'></li>
+										<li clasS='negro'></li>
+									</ul>
+								</div>
+
+								<div class='precio-cont'>
+    								<h4 class='precio'>
+        								    <del>$".$fila['precio']."</del>
+    								</h4>
+    							
+        						<h4 class='precio'>
+        								    $".$fila['precio_descuento']."
+    								</h4>
+								</div>
+								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
+								
+								<ul>
+								<!-- <li>Categoria:</li> -->
+								</ul>
+							
+							</a>
+					</div>
+						
+					</div>";
+					if($z==5){
+						echo "</div>";
+						echo "</div>";
+						$z=0;
+					}
 		
 				}
 			}//if es_destacado
@@ -201,7 +278,7 @@ public function listarProductos(){
 			if($i==5){break;}
 
 
-			if($fila['tiene_descuento']==1){
+			if($fila['tiene_descuento']==0){
 
 					if($z==1){
 						echo "<div class='producto-row row' style=''>";
@@ -224,9 +301,49 @@ public function listarProductos(){
 
 								<div class='precio-cont'>
     								<h4 class='precio'>
-        								<i  style='color:grey; !important;    text-decoration: line-through;'>
         								    $".$fila['precio']."
-        								</i>
+    								</h4>
+    							
+        					
+								</div>
+								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
+
+							
+							
+							</a>
+					</div>
+						
+					</div>";
+					if($z==2){
+						echo "</div>";
+						echo "</div>";
+						$z=0;
+					}
+
+				}else if($fila['tiene_descuento']==1){
+				    
+				    if($z==1){
+						echo "<div class='producto-row row' style=''>";
+						echo "<div class='container'>";
+					}
+				
+					echo "<div class='col-xs-6 hidden-sm hidden-md hidden-lg'>
+					
+					<div class='producto-responsive text-center'>
+							<a href='vermasproducto.php?id=".$fila['id']."'>
+								<img  src=img/".$fila['imagen']." class='img-responsive' alt='Protech Dry   ".$fila['modelo']."'>
+								<h4>".strtoupper($fila['modelo'])."</h4>
+								<br>
+								<div class='color-cont'>
+									<ul style='padding-left:0'>
+										<li class='blanco'></li>
+										<li clasS='negro'></li>
+									</ul>
+								</div>
+
+								<div class='precio-cont'>
+    								<h4 class='precio'>
+        								    $".$fila['precio']."
     								</h4>
     							
         							<h4 class='precio'>
@@ -246,10 +363,6 @@ public function listarProductos(){
 						echo "</div>";
 						$z=0;
 					}
-
-				}else if($fila['tiene_descuento']==1){
-				
-				
 		
 				}
 			}//if es_destacado
@@ -281,7 +394,7 @@ public function listarProductos(){
 			if($i==11){break;}
 
 
-			if($fila['tiene_descuento']==1){
+			if($fila['tiene_descuento']==0){
 
 					if($z==1){
 						echo "<div class='producto-row row'>";
@@ -304,9 +417,52 @@ public function listarProductos(){
 
 								<div class='precio-cont'>
     								<h4 class='precio'>
-        								<i  style='color:grey; !important;    text-decoration: line-through;'>
         								    $".$fila['precio']."
-        								</i>
+    								</h4>
+    							
+        						
+								</div>
+								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
+								
+								<ul>
+								<!-- <li>Categoria:</li> -->
+								</ul>
+							
+							</a>
+					</div>
+						
+					</div>";
+					if($z==5){
+						echo "</div>";
+						echo "</div>";
+						$z=0;
+					}
+
+				}else if($fila['tiene_descuento']==1){
+				    $descuento = (($fila['precio']-$fila['precio_descuento'])/$fila['precio'])*100;
+					if($z==1){
+						echo "<div class='producto-row row'>";
+						echo "<div class='container'>";
+					}
+				
+					echo "<div class='hidden-xs col-sm-6 col-md-6 col-lg-6'>
+					
+					<div class='producto-responsive-genero text-center'>
+							<a href='vermasproducto.php?id=".$fila['id']."'>
+								<img  src=img/".$fila['imagen']." width='200' height='200' alt='Protech  ".$fila['modelo']."'>
+								<h3 class='descuento'>-".$descuento."% OFF</h3>
+								<br>
+								<h4 style='display:inline-block'>".strtoupper($fila['modelo'])."</h4>
+								<div class='color-cont' style='display:inline-block'>
+									<ul>
+										<li class='blanco'></li>
+										<li clasS='negro'></li>
+									</ul>
+								</div>
+
+								<div class='precio-cont'>
+    								<h4 class='precio'>
+        								    <del>$".$fila['precio']."</del>
     								</h4>
     							
         							<h4 class='precio'>
@@ -328,9 +484,6 @@ public function listarProductos(){
 						echo "</div>";
 						$z=0;
 					}
-
-				}else if($fila['tiene_descuento']==1){
-				
 				
 		
 				}
@@ -364,7 +517,7 @@ public function listarProductos(){
 			if($i==5){break;}
 
 
-			if($fila['tiene_descuento']==1){
+			if($fila['tiene_descuento']==0){
 
 					if($z==1){
 						echo "<div class='producto-row row' style=''>";
@@ -387,14 +540,10 @@ public function listarProductos(){
 
 								<div class='precio-cont'>
     								<h4 class='precio'>
-        								<i  style='color:grey; !important;    text-decoration: line-through;'>
         								    $".$fila['precio']."
-        								</i>
     								</h4>
     							
-        							<h4 class='precio'>
-        								    $".$fila['precio_descuento']."
-    								</h4>
+
 								</div>
 								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
 
@@ -412,7 +561,47 @@ public function listarProductos(){
 
 				}else if($fila['tiene_descuento']==1){
 				
+				if($z==1){
+						echo "<div class='producto-row row' style=''>";
+						echo "<div class='container'>";
+					}
 				
+					echo "<div class='col-xs-6 hidden-sm hidden-md hidden-lg'>
+					
+					<div class='producto-responsive text-center'>
+							<a href='vermasproducto.php?id=".$fila['id']."'>
+								<img  src=img/".$fila['imagen']." class='img-responsive' alt='Protech Dry   ".$fila['modelo']."'>
+								<h4>".strtoupper($fila['modelo'])."</h4>
+								<br>
+								<div class='color-cont'>
+									<ul style='padding-left:0'>
+										<li class='blanco'></li>
+										<li clasS='negro'></li>
+									</ul>
+								</div>
+
+								<div class='precio-cont'>
+    								<h4 class='precio'>
+        								    <del>$".$fila['precio']."</del>
+    								</h4>
+    							
+        						<h4 class='precio'>
+        								    $".$fila['precio_descuento']."
+    								</h4>
+								</div>
+								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
+
+							
+							
+							</a>
+					</div>
+						
+					</div>";
+					if($z==2){
+						echo "</div>";
+						echo "</div>";
+						$z=0;
+					}
 		
 				}
 			}//if es_destacado
@@ -445,7 +634,7 @@ public function listarProductos(){
 			if($i==5){break;}
 
 
-			if($fila['tiene_descuento']==1){
+			if($fila['tiene_descuento']==0){
 
 					if($z==1){
 						echo "<div class='producto-row row' style=''>";
@@ -468,9 +657,51 @@ public function listarProductos(){
 
 								<div class='precio-cont'>
     								<h4 class='precio'>
-        								<i  style='color:grey; !important;    text-decoration: line-through;'>
         								    $".$fila['precio']."
-        								</i>
+        								</h4>
+    							
+    							<!--<h4 class='precio'>
+    								    $".$fila['precio_descuento']."
+								</h4>-->
+								</div>
+								<a class='comprar-btn' href='vermasproducto.php?id=".$fila['id']."'>COMPRAR</a>
+
+							
+							
+							</a>
+					</div>
+						
+					</div>";
+					if($z==2){
+						echo "</div>";
+						echo "</div>";
+						$z=0;
+					}
+
+				}else if($fila['tiene_descuento']==1){
+				
+				if($z==1){
+						echo "<div class='producto-row row' style=''>";
+						echo "<div class='container'>";
+					}
+				
+					echo "<div class='col-xs-6 hidden-sm hidden-md hidden-lg'>
+					
+					<div class='producto-responsive text-center'>
+							<a href='vermasproducto.php?id=".$fila['id']."'>
+								<img  src=img/".$fila['imagen']." class='img-responsive' alt='Protech Dry   ".$fila['modelo']."'>
+								<h4>".strtoupper($fila['modelo'])."</h4>
+								<br>
+								<div class='color-cont'>
+									<ul style='padding-left:0'>
+										<li class='blanco'></li>
+										<li clasS='negro'></li>
+									</ul>
+								</div>
+
+								<div class='precio-cont'>
+    								<h4 class='precio'>
+        								   <del>$".$fila['precio']."</del>
         								</h4>
     							
     							<h4 class='precio'>
@@ -490,10 +721,6 @@ public function listarProductos(){
 						echo "</div>";
 						$z=0;
 					}
-
-				}else if($fila['tiene_descuento']==1){
-				
-				
 		
 				}
 			}//if es_destacado
@@ -613,325 +840,7 @@ public function listarProductosParaDispositivosSm(){
 
 	}//function
 
-	public function listarProductosHankook(){
-		//contador
-		$z=0;
-		$i=0;
-
-		$sql="SELECT PRO.id,MAR.descripcion as marca,PRO.modelo,ANC.descripcion as ancho,ALT.descripcion as alto,PRO.imagen,PRO.precio,PRO.tiene_descuento,PRO.precio_descuento,CAT.descripcion,ROD.descripcion as rodado,TV.descripcion as tipo_vehiculo
-			 FROM producto PRO JOIN marca MAR ON MAR.id=PRO.id_marca
-			 					JOIN ancho ANC ON ANC.id=PRO.id_ancho
-			 					JOIN alto ALT  ON ALT.id=PRO.id_alto
-			 					 JOIN categoria CAT ON PRO.id_categoria=CAT.id 
-			 					JOIN rodado ROD ON PRO.id_rodado=ROD.id_rodado
-			 					JOIN tipo_vehiculo TV ON PRO.id_tipo_vehiculo=TV.id_tipo_vehiculo
-			 WHERE MAR.descripcion='Hankook' AND PRO.es_destacado=1
-			 ORDER BY PRO.precio ASC";
-
-		$consulta=mysqli_query($this->conexion,$sql);
-
-		while($fila=mysqli_fetch_assoc($consulta)){
-			
-			$i++;
-			if($i==6){break;}
-
-			if($fila['tiene_descuento']==0){
-
-			if($z==1){
-						echo "<div class='producto-row row'>";
-						echo "<div class='container'>";
-					}
-				
-					echo "<div class='hidden-xs hidden-sm col-md-15 col-lg-15'>
-					<div class='producto-responsive'>
-
-
-						<h3>".$fila['marca']." <br><span> ".$fila['modelo']."</span></h3>
-
-
-						<img  src=img/".$fila['imagen']." width='165' height='165' alt='Oeste Neumaticos - GBA - Zona Oeste - Ituzaingo ".$fila['marca']." ".$fila['modelo']." ".$fila['ancho']." ".$fila['alto']." ".$fila['rodado']."'>
-						
-						<div class='producto-precio-responsive'>
-						<h4>$".$fila['precio']."</h4>
-						</div>
-						
-						<ul>
-						<li>Medida:".$fila['ancho']." x ".$fila['alto']."</li>
-						<li>Rodado:".$fila['rodado']."</li>
-						<li>Vehiculo:".$fila['tipo_vehiculo']."</li>
-						<li>Categoria:".$fila['descripcion']."</li>
-						</ul>
-						
-						<div class='paralelogramo-btn-responsive'><a href='vermasproducto.php?id=".$fila['id']."'>Ver mas</a></div>
-
-						</div>
-					</div>";
-					if($z==5){
-						echo "</div>";
-						echo "</div>";
-						$z=0;
-					}
-
-				}else if($fila['tiene_descuento']==1){
-				
-					if($z==1){
-						echo "<div class='producto-row row'>";
-						echo "<div class='container'>";
-					}
-					$cien=100;
-					echo "<div class='hidden-xs hidden-sm col-md-15 col-lg-15'>
-						<div class='producto-responsive'>
-
-						<h3>".$fila['marca']." <br><span> ".$fila['modelo']."</span></h3>
-
-
-						<img  src=img/".$fila['imagen']." width='165' height='165' alt='Oeste Neumaticos - GBA - Zona Oeste - Ituzaingo ".$fila['marca']." ".$fila['modelo']." ".$fila['ancho']." ".$fila['alto']." ".$fila['rodado']." ".-floor(($fila['precio']-$fila['precio_descuento'])/$fila['precio']*$cien)."% OFF'>
-						<!--<div class='circulo-cont'>COMENTADO--><h3 class='producto-porcentaje-descuento'>".-floor(($fila['precio']-$fila['precio_descuento'])/$fila['precio']*$cien)."%</h3><!--</div>-->
-
-						<div class='producto-precio-responsive'>
-						<h4><del>$".$fila['precio']."</del> $".$fila['precio_descuento']." </h4>
-						</div>
-
-						<ul>
-						<li>Medida:".$fila['ancho']." x ".$fila['alto']."</li>
-						<li>Rodado:".$fila['rodado']."</li>
-						<li>Vehiculo:".$fila['tipo_vehiculo']."</li>
-						<li>Categoria:".$fila['descripcion']."</li>
-						</ul>
-
-						<div class='paralelogramo-btn-responsive'><a href='vermasproducto.php?id=".$fila['id']."'>Ver mas</a></div>
-				
-					</div>
-					</div>";	
-
-					if($z==5){
-						echo "</div>";
-						echo "</div>";
-						$z=0;
-					}
-		
-				}
-		}//while
-
-
-
-	}//function
-
-	public function listarProductosHankookParaDispositivosXs(){
-		//contador
-		$z=0;
-		$i=0;
-
-		$sql="SELECT PRO.id,MAR.descripcion as marca,PRO.modelo,ANC.descripcion as ancho,ALT.descripcion as alto,PRO.imagen,PRO.precio,PRO.tiene_descuento,PRO.precio_descuento,CAT.descripcion,ROD.descripcion as rodado,TV.descripcion as tipo_vehiculo
-			 FROM producto PRO JOIN marca MAR ON MAR.id=PRO.id_marca
-			 					JOIN ancho ANC ON ANC.id=PRO.id_ancho
-			 					JOIN alto ALT  ON ALT.id=PRO.id_alto
-			 					 JOIN categoria CAT ON PRO.id_categoria=CAT.id 
-			 					JOIN rodado ROD ON PRO.id_rodado=ROD.id_rodado
-			 					JOIN tipo_vehiculo TV ON PRO.id_tipo_vehiculo=TV.id_tipo_vehiculo
-			 WHERE MAR.descripcion='Hankook' AND PRO.es_destacado=1
-			 ORDER BY PRO.precio ASC";
-
-		$consulta=mysqli_query($this->conexion,$sql);
-
-		while($fila=mysqli_fetch_assoc($consulta)){
-
-			//lista nada mas los primeros 10 productos
-			$i++;
-			$z++;//Descomentar para listar 8 elementos segun grilla bootstrap
-			if($i==5){break;}
-
-
-			if($fila['tiene_descuento']==0){
-
-					if($z==1){
-						echo "<div class='producto-row row'>";
-						echo "<div class='container'>";
-					}
-				
-					echo "<div class='col-xs-6 hidden-sm hidden-md hidden-lg'>
-					<div class='producto-responsive'>
-
-
-						<h3>".$fila['marca']." <br><span> ".$fila['modelo']."</span></h3>
-
-
-						<img  src=img/".$fila['imagen']." width='150' height='150'>
-						
-						<div class='producto-precio-responsive'>
-						<h4>$".$fila['precio']."</h4>
-						</div>
-						
-						<ul>
-						<li>Medida:".$fila['ancho']." x ".$fila['alto']."</li>
-						<li>Rodado:".$fila['rodado']."</li>
-						<li>Vehiculo:".$fila['tipo_vehiculo']."</li>
-						<li>Categoria:".$fila['descripcion']."</li>
-						</ul>
-						
-						<div class='paralelogramo-btn-responsive'><a href='vermasproducto.php?id=".$fila['id']."'>Ver mas</a></div>
-
-						</div>
-					</div>";
-					if($z==2){
-						echo "</div>";
-						echo "</div>";
-						$z=0;
-					}
-
-				}else if($fila['tiene_descuento']==1){
-				
-					if($z==1){
-						echo "<div class='producto-row row'>";
-						echo "<div class='container'>";
-					}
-					$cien=100;
-					echo "<div class='col-xs-6 hidden-sm hidden-md hidden-lg'>
-						<div class='producto-responsive'>
-
-						<h3>".$fila['marca']." <br><span> ".$fila['modelo']."</span></h3>
-
-
-						<img   src=img/".$fila['imagen']." width='150' height='150'>
-
-						<div class='producto-precio-responsive'>
-						<h4><del>$".$fila['precio']."</del> $<br>".$fila['precio_descuento']."</h4>
-						</div>
-
-						<ul>
-						<li>Medida:".$fila['ancho']." x ".$fila['alto']."</li>
-						<li>Rodado:".$fila['rodado']."</li>
-						<li>Vehiculo:".$fila['tipo_vehiculo']."</li>
-						<li>Categoria:".$fila['descripcion']."</li>
-						</ul>
-
-						<div class='paralelogramo-btn-responsive'><a href='vermasproducto.php?id=".$fila['id']."'>Ver mas</a></div>
-				
-					</div>
-					</div>";	
-
-					if($z==2){
-						echo "</div>";
-						echo "</div>";
-						$z=0;
-					}
-		
-				}
-		}//while
-
-
-
-	}//function
 	
-	public function listarProductosHankookParaDispositivosSm(){
-		//contador
-		$i=0;
-		$z=0;//Descomentar para listar 8 elementos segun grilla bootstrap
-
-		$sql="SELECT PRO.id,MAR.descripcion as marca,PRO.modelo,ANC.descripcion as ancho,ALT.descripcion as alto,PRO.imagen,PRO.precio,PRO.es_destacado,PRO.tiene_descuento,PRO.precio_descuento,CAT.descripcion,ROD.descripcion as rodado,TV.descripcion as tipo_vehiculo
-			 FROM producto PRO  JOIN marca MAR ON MAR.id=PRO.id_marca
-			 					JOIN ancho ANC ON ANC.id=PRO.id_ancho
-			 					JOIN alto ALT  ON ALT.id=PRO.id_alto
-			 					JOIN categoria CAT ON PRO.id_categoria=CAT.id 
-			 					JOIN rodado ROD ON PRO.id_rodado=ROD.id_rodado
-			 					JOIN tipo_vehiculo TV ON PRO.id_tipo_vehiculo=TV.id_tipo_vehiculo
-			 WHERE MAR.descripcion='Hankook' AND PRO.es_destacado=1
-			 ORDER BY PRO.precio ASC";
-
-
-
-		$consulta=mysqli_query($this->conexion,$sql);
-
-		while($fila=mysqli_fetch_assoc($consulta)){
-		if($fila['es_destacado']==1){
-
-			//lista nada mas los primeros 10 productos
-			$i++;
-			$z++;//Descomentar para listar 8 elementos segun grilla bootstrap
-			if($i==5){break;}
-
-
-			if($fila['tiene_descuento']==0){
-
-					if($z==1){
-						echo "<div class='producto-row row'>";
-						echo "<div class='container'>";
-					}
-				
-					echo "<div class='hidden-xs col-sm-3 hidden-md hidden-lg'>
-					<div class='producto-responsive'>
-
-
-						<h3>".$fila['marca']." <br><span> ".$fila['modelo']."</span></h3>
-
-
-						<img  src=img/".$fila['imagen']." width='150' height='150'>
-						
-						<div class='producto-precio-responsive'>
-						<h4>$".$fila['precio']."</h4>
-						</div>
-						
-						<ul>
-						<li>Medida:".$fila['ancho']." x ".$fila['alto']."</li>
-						<li>Rodado:".$fila['rodado']."</li>
-						<li>Vehiculo:".$fila['tipo_vehiculo']."</li>
-						<li>Categoria:".$fila['descripcion']."</li>
-						</ul>
-						
-						<div class='paralelogramo-btn-responsive'><a href='vermasproducto.php?id=".$fila['id']."'>Ver mas</a></div>
-
-						</div>
-					</div>";
-					if($z==4){
-						echo "</div>";
-						echo "</div>";
-						$z=0;
-					}
-
-				}else if($fila['tiene_descuento']==1){
-				
-					if($z==1){
-						echo "<div class='producto-row row'>";
-						echo "<div class='container'>";
-					}
-					$cien=100;
-					echo "<div class='hidden-xs col-sm-3 hidden-md hidden-lg'>
-						<div class='producto-responsive'>
-
-						<h3>".$fila['marca']." <br><span> ".$fila['modelo']."</span></h3>
-
-
-						<img   src=img/".$fila['imagen']." width='150' height='150'>
-
-						<div class='producto-precio-responsive'>
-						<h4><del>$".$fila['precio']."</del> $<br>".$fila['precio_descuento']."</h4>
-						</div>
-
-						<ul>
-						<li>Medida:".$fila['ancho']." x ".$fila['alto']."</li>
-						<li>Rodado:".$fila['rodado']."</li>
-						<li>Vehiculo:".$fila['tipo_vehiculo']."</li>
-						<li>Categoria:".$fila['descripcion']."</li>
-						</ul>
-
-						<div class='paralelogramo-btn-responsive'><a href='vermasproducto.php?id=".$fila['id']."'>Ver mas</a></div>
-				
-					</div>
-					</div>";	
-
-					if($z==4){
-						echo "</div>";
-						echo "</div>";
-						$z=0;
-					}
-		
-				}
-			}//if es_destacado
-		}//while
-
-
-
-	}//function
 
 	
 //LISTAR UN SOLO PRODUCTO
@@ -959,7 +868,7 @@ public function listarUnSoloProducto($id){
 		while($fila=$resultado->fetch_assoc()){
 
 			if($fila['tiene_stock']==1){
-				if($fila['tiene_descuento']==1){
+				if($fila['tiene_descuento']==0){
 
 
 			//desconmentar calcular-cont row para ver el div con los iconos con sus correspondientes modals de calculo de envio y cuotas.
@@ -970,11 +879,90 @@ public function listarUnSoloProducto($id){
 				</div>
 
 				<div class='row'>
-				<h2 style='color:grey;text-decoration: line-through;'>$".$fila['precio']."</h2>
-				<h2 style='color:black;display:inline-block'>$".$fila['precio_descuento']."</h2>
-				<div class='icon-seccion' style='display:inline-block'>
+				<h2 style='color:black;display:inline-block'>$".$fila['precio']."</h2>
+				<!--<div class='icon-seccion' style='display:inline-block'>
 				<div class='arrow_box2'>
 						<h3>-20%OFF</h3>
+					</div>
+				</div>
+				</div>-->
+
+								<form id='form-ver-mas'  action='agregarACarrito.php' method='POST'>
+
+				<div class='row'>
+
+					<label>
+						<input type='radio' name='color' id='negro-input' value='negro'>
+						<div class='colores' id='negro-div' style='background-color:black;width:50px;height:50px;display:inline-block'></div>
+					</label>
+					
+					<label>
+						<input type='radio' name='color' id='blanco-input' value='blanco'>
+						<div class='colores' id='blanco-div' style='background-color:white;width:50px;height:50px;display:inline-block'></div>
+					</label>	
+
+					<div id='color-error' class='agregarACarrito-error' style='color:red'>
+						Seleccione un color
+					</div>			
+				
+
+				</div>
+
+
+				<div class='row'>
+						<select class='form-control select-talle' name='talle' id='talle' style='margin-bottom:1%;display:inline-block;width:50%' id='select-talle'>
+							<option value='0'>Seleccione un talle</option>
+							<option value='S'>S</option>
+							<option value='M'>M</option>
+							<option value='L'>L</option>
+							<option value='XL'>XL</option>
+							<option value='XXL'>XXL</option>
+							
+							
+							
+							
+						</select>
+						<a class='lista-de-talles-link' style='display:inline-block;'data-toggle='modal' data-target='#lista-de-talles-modal'>Guia de talles</a>
+
+						<div id='talle-error' class='agregarACarrito-error' style='color:red'>
+							Seleccione un talle
+						</div>
+				</div>
+
+				<div class='row'>
+						<input type='number' min='1' style='display:inline-block' name='cantidad' id='cantidad'>
+						<input type='hidden' id='ver-mas-id'  name='id' value='".$fila['id']."'>
+						<input type='hidden' id='ver-mas-marca' name='marca' value='".$fila['marca']."'>
+						<input type='hidden' id='ver-mas-precio' name='precio' value='".$fila['precio']."'>
+						<input type='hidden' id='ver-mas-modelo' name='modelo' value='".$fila['modelo']."'>		
+						<input type='hidden' id='ver-mas-imagen' name='imagen' value='".$fila['imagen']."'>			
+						<input type='hidden' id='ver-mas-tiene-descuento' name='tiene_descuento' value='".$fila['tiene_descuento']."'>
+					<input type='hidden' id='ver-mas-precio-descuento' name='precio_descuento' value='".$fila['precio_descuento']."'>			
+
+
+						<button type='button' id='btn-carrito' style='padding:21px;margin-left:1%;' class='btn btn-primary' onclick='submitformCompra()'>AGREGAR AL CARRITO</button>
+					
+				</form>	
+
+								
+				</div>
+				";
+				}elseif($fila['tiene_descuento']==1){
+                $descuento = (($fila['precio']-$fila['precio_descuento'])/$fila['precio'])*100;
+
+			//desconmentar calcular-cont row para ver el div con los iconos con sus correspondientes modals de calculo de envio y cuotas.
+			echo
+			"	
+				<div class='row'>
+				<h1>".strtoupper($fila['modelo'])."</h1>
+				</div>
+
+				<div class='row'>
+				<del><h2 style='color: grey;font-size: 2rem;'>$".$fila['precio']."</h2></del>
+				<h2 style='color:black;display:inline-block;margin-top:0'>$".$fila['precio_descuento']."</h2>
+				<div class='icon-seccion' style='display:inline-block'>
+				<div class='arrow_box2'>
+						<h3>-".$descuento."%OFF</h3>
 					</div>
 				</div>
 				</div>
@@ -1547,7 +1535,7 @@ public function listarUnSoloProducto($id){
 					<div class='row'>
 						<div class='container'>
 							<div class='garantia col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-							<h1><b><i>".$fila['garantia']." Años <br> Garantia Oficial</i></b></h1>
+							<h1><b><i>".$fila['garantia']." A単os <br> Garantia Oficial</i></b></h1>
 							<img src='elementos_separados/garantia-icon.png'>
 							</div>
 						</div>
@@ -2488,7 +2476,7 @@ public function buscarUsuarioEInsertarloEnTabla($nro_doc,$tipo_doc,$nombre,$apel
 			  SET contrasenia='$contrasenia'
 			  WHERE email='$email'";
 
-		$consulta=mysqli_query($this->conexion,$sql) or die ("No se pudo insertar contraseña en la base de datos");*/
+		$consulta=mysqli_query($this->conexion,$sql) or die ("No se pudo insertar contrase単a en la base de datos");*/
 
 	}
 
